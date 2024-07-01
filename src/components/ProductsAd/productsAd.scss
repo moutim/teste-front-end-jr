@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.products-ad {
+  margin-top: 66px;
+
+  .container-title {
+    p {
+      text-align: center;
+      font-size: 15px;
+      font-weight: $font-weight-bold;
+    }
+
+  }
+
+  .cardAd {
+    width: 589.73px;
+    height: 284px;
+  }
+
+  .container-cards-ad {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+  }
+}

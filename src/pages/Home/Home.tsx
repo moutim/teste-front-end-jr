@@ -3,6 +3,7 @@ import './home.scss';
 import Banner from '../../components/Banner/Banner';
 import Categories from '../../components/Categories/Categories';
 import RelatedProducts from '../../components/RelatedProducts/RelatedProducts';
+import ProductsAd from '../../components/ProductsAd/ProductsAd';
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <Banner />
       <Categories />
       <RelatedProducts />
+      <ProductsAd />
     </>
   );
 };
