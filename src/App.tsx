@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './app.scss';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
           <Route path="/" element={ <Home /> } />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 };
