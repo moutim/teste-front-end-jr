@@ -1,9 +1,12 @@
 import React from 'react';
 import './home.scss';
+import Banner from '../../components/Banner/Banner';
 
 const Home: React.FC = () => {
   return (
-    <h1>Home</h1>
+    <>
+      <Banner />
+    </>
   );
 };
 

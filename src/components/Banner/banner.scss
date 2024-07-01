@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.banner-home {
+  background-image: url('../../assets/banner.png');
+  background-size: cover;
+  background-position: center;
+  height: 395px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-weight: $font-weight-semibold;
+  padding-left: 90px;
+  gap: 20px;
+
+  h1 {
+    font-size: $title-large;
+  }
+
+  h2 {
+    font-size: $subtitle-large
+  }
+
+  button {
+    @include button-style(227px, 60px, 18px)
+  }
+}

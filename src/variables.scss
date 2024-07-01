@@ -6,3 +6,19 @@ $preto-footer: #2A2A2A;
 
 $font-weight-medium: 400;
 $font-weight-semibold: 600;
+
+$title-large: 48px;
+$subtitle-large: 36px;
+
+$p-small: 12px;
+
+@mixin button-style ($width, $height, $font-size) {
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  background-color: $rosa-primario;
+  color: white;
+  font-weight: $font-weight-semibold;
+  border: none;
+  border-radius: 5px;
+}
