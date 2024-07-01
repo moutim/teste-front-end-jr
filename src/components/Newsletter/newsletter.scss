@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+.newsletter {
+  padding: 40px 29px;
+  border-radius: 10px;
+  width: 380px;
+  height: 260px;
+
+  h6 {
+    font-size: 18px;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+    
+    span {
+      font-weight: $font-weight-bold;
+      font-size: 21px;
+    }
+  }
+  
+  p {
+    font-weight: $font-weight-light;
+    font-size: $p-small;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .container-input {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 31px;
+
+    input {
+      width: 230px;
+      height: 45px;
+      border: 1px solid $preto-footer;
+      border-radius: 4px;
+      padding-left: 15px;
+    }
+
+    button {
+      @include button-style(62px, 45px, 14px);
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+  }
+}
