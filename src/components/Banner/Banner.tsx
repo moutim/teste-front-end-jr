@@ -4,7 +4,7 @@ import './banner.scss';
 const Banner: React.FC = () => {
   return (
     <section className='banner-home'>
-      <h1>Veha conhecer nossas <br /> promoções</h1>
+      <h1>Venha conhecer nossas <br /> promoções</h1>
       <h2>50% Off nos produtos</h2>
       <button>Ver produtos</button>
     </section>

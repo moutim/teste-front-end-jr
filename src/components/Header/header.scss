@@ -112,6 +112,7 @@ header {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      transition: .2s;
 
       li {
         display: flex;
@@ -135,6 +136,11 @@ header {
         span {
           color: $rosa-primario;
         }
+      }
+
+      a:hover {
+        color: $rosa-primario;
+        transition: .2s;
       }
     }
   }
