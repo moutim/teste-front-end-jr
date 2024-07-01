@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.brands {
+  margin-top: 78px;
+
+  .container-title {
+    h5 {
+      font-size: 30px;
+      font-weight: $font-weight-bold;
+      color: $rosa-primario;
+      text-align: center;
+    }
+  }
+
+  .container-brands {
+    margin-top: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .brands-carousel {
+      overflow: hidden;
+      // width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transition: .3s ease-in-out;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+}
