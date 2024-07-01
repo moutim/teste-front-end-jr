@@ -1,0 +1,113 @@
+@import '../../variables.scss';
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.54);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  article {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    width: 769px;
+    height: 299.26px;
+    font-family: $font-family-modal-lato;
+
+    .modal-infos {
+      height: 100%;
+      display: flex;
+      padding: 22px 0;
+      flex-direction: column;
+    
+      .container-i-close {
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .container-product-info {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h5 {
+          color: $azul-modal;
+          font-size: $p-large;
+          font-weight: $font-weight-regular;
+        }
+
+        .price {
+          font-weight: $font-weight-black;
+          font-size: $p-large;
+          color: $azul-modal;
+        }
+
+        .description {
+          font-weight: $font-weight-regular;
+          color: #222222;
+          font-size: 10px;
+          line-height: 150.5%;
+        }
+
+        .details {
+          display: flex;
+          align-items: center;
+          font-size: $p-small;
+          font-weight: $font-weight-regular;
+          color: $azul-modal;
+
+          svg, i {
+            width: 15px;
+            height: 15px;
+          }
+        }
+
+        .button-quantity {
+          width: 110px;
+          height: 36px;
+          background-color: none;
+          border: 1px solid $azul-modal;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 4px;
+          padding: 0 15px;
+          font-family: $font-family-modal-montserrat;
+          font-size: $p-medium;
+          font-weight: $font-weight-medium;
+
+          svg, i {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .button-buy {
+          @include button-style(245px, 44px, 14px);
+          font-weight: $font-weight-bold;
+          font-family: "Poppins", sans-serif;
+          text-transform: uppercase;
+        }
+
+        .button-buy:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

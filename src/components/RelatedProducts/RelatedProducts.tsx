@@ -133,6 +133,7 @@ const RelatedProducts: React.FC = () => {
               return (
                 <CardProduct
                   key={index}
+                  productName={item.productName}
                   productDescription={item.descriptionShort}
                   srcImg={item.photo}
                   oldPrice={item.price}
