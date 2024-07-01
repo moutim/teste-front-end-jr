@@ -4,6 +4,7 @@ import './relatedProducts.scss';
 import CardProduct from '../CardProduct/CardProduct';
 import { MdOutlineKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import fetchProducts from '../../utils/fetchProducts';
+import CardAd from '../CardAd/CardAd';
 
 interface ReturnAPI {
   success: boolean,
@@ -146,6 +147,11 @@ const RelatedProducts: React.FC = () => {
         </div>
     
         <i onClick={showNextProduct}><MdKeyboardArrowRight /></i>
+      </section>
+
+      <section className='section-partners limiter'>
+        <CardAd title='Parceiros' />
+        <CardAd title='Parceiros' />
       </section>
     </article>
   );
