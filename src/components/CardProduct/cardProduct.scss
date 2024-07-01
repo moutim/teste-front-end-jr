@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+.card-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 270px;
+  height: 500px;
+  color: $preto-produto;
+  box-shadow: 0 3px 19px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  padding: 22px 12px 17px 12px;
+
+  figure {
+    figcaption {
+      font-weight: $font-weight-light;
+      font-size: $product-description-size;
+    }
+  }
+
+  .price-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .old-price {
+    font-size: $p-medium;
+    font-weight: $font-weight-regular;
+    text-decoration: line-through;
+    color: #808080;
+  }
+
+  .new-price {
+    font-size: $p-large;
+    font-weight: $font-weight-bold;
+  }
+
+  .price-divided {
+    font-size: $p-small;
+    font-weight: $font-weight-regular;
+  }
+
+  .free-shipping {
+    font-size: $p-small;
+    font-weight: $font-weight-regular;
+    color: $rosa-primario;
+  }
+
+  button {
+    @include button-style(245px, 44px, 14px);
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+}

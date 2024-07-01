@@ -4,14 +4,22 @@ $preto-produto: #3F3F40;
 $preto-subtitulo: #4E4E4E;
 $preto-footer: #2A2A2A;
 
+$font-weight-light: 300;
+$font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
+$font-weight-bold: 700;
 
 $title-large: 48px;
+$title-medium: 30px;
+
 $subtitle-large: 36px;
 
 $p-small: 12px;
 $p-medium: 16px;
+$p-large: 20px;
+
+$product-description-size: 15px;
 
 @mixin button-style ($width, $height, $font-size) {
   width: $width;

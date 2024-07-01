@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.stylized-title {
+    position: relative;
+    text-align: center;
+    font-size: $title-medium;
+    font-weight: $font-weight-bold;
+    color: $rosa-primario;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        background-color: #DEDEDE;
+        width: 360px;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        left: 70px;
+    }
+
+    &::after {
+        right: 70px;
+    }
+}
