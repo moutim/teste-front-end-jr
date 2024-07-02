@@ -106,8 +106,18 @@ footer {
   }
 
   @media screen and (max-width: 900px) {
+    .container-infos-footer {
+      
+    }
+    
+    .container-infos-footer {
+      justify-content: center;
+    }
+
     .infos-and-newsletter {
       flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
     }
 
     .container-footer-copyright {
