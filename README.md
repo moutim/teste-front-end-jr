@@ -1,31 +1,70 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End Jr
+# 🛒 Projeto de E-commerce
 
-### Vem ser #Econverse!
+### 📖 Visão Geral do Projeto
 
-Segue abaixo as instruções para a execução do teste.
+Este projeto é uma página de e-commerce desenvolvida em **React** e **TypeScript**, destinada a exibir uma vitrine de produtos. Os dados dos produtos são consumidos de um endpoint, e ao clicar em um produto, um modal é aberto exibindo as informações detalhadas do produto.
 
-## Instruções
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas** 
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail ana.nascimento@econverse.com.br, joao.victor@econverse.com.br e eduardo.rodrigues@econverse.com.br com o título **Teste Vaga FrontEnd Jr**
+### 🛠 Tecnologias Usadas
 
-## Especificações Técnicas
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+- **React**: Biblioteca JavaScript para construir interfaces de usuário.
+- **TypeScript**: Superconjunto de JavaScript que adiciona tipos estáticos.
+- **SCSS**: Utilizado para facilitar a manutenção e a escalabilidade dos estilos.
+- **HTML5**: Estrutura básica do projeto.
 
-## Pontos Extras
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+### 📁 Estrutura de Pastas
 
-## O que avaliaremos em seu teste
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+```
+projeto-ecommerce/
+│
+├── public/
+│   ├── index.html          # Arquivo principal HTML
+│   └── ...                 # Outros arquivos estáticos
+├── src/
+│   ├── components/
+│   │   ├── Banner/
+│   │   │   ├── Banner.tsx  # Componente para exibir o banner
+│   │   │   └── Banner.scss # Estilos do componente Banner
+│   │   ├── Modal/
+│   │   │   ├── Modal.tsx   # Componente para exibir o modal com detalhes do produto
+│   │   │   └── Modal.scss  # Estilos do componente Modal
+│   │   └── ...             # Outros componentes
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.tsx    # Página principal
+│   │   │   └── Home.scss   # Estilos da página Home
+│   │   └── ...             # Outras páginas
+│   │   ├── variables.scss  # Arquivo de variáveis SCSS
+│   │   └── app.scss       # Arquivo SCSS principal
+│   ├── App.tsx             # Componente principal da aplicação com as rotas
+│   ├── index.tsx           # Ponto de entrada da aplicação React
+│   └── ...                 # Outros arquivos e pastas de código-fonte
+├── package.json            # Arquivo de configuração do npm
+└── README.md               # Documentação do projeto
+```
 
-**Boa sorte! ;)**
+### 🚀 Como Rodar
+
+1. **Clone o Repositório:**
+
+   ```sh
+   git clone https://github.com/moutim/ecommerce-teste-front-end.git
+   cd ecommerce-teste-front-end
+   ```
+
+2. **Instale as Dependências:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Inicie o Servidor de Desenvolvimento:**
+
+   ```sh
+   npm run dev
+   ```
+
+4. **Abra o Navegador:**
+
+   O projeto estará rodando em `http://localhost:5173`.
+
+---
