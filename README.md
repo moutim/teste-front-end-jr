@@ -47,7 +47,7 @@ projeto-ecommerce/
 1. **Clone o Repositório:**
 
    ```sh
-   git clone https://github.com/moutim/ecommerce-teste-front-end.git
+   git clone https://github.com/moutim/teste-front-end-jr.git
    cd ecommerce-teste-front-end
    ```
 
