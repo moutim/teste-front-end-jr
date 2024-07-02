@@ -14,7 +14,7 @@ const App: React.FC = () => {
           <Route path="/" element={ <Home /> } />
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };

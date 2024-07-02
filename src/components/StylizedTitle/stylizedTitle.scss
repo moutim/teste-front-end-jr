@@ -26,4 +26,11 @@
     &::after {
         right: 70px;
     }
+
+    @media only screen and (max-width: 1279px) {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
 }

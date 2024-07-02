@@ -23,3 +23,24 @@
     margin-top: 88px;
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .products-ad {
+    .cardAd {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .products-ad {
+    .cardAd {
+      width: 100%;
+    }
+
+    .container-cards-ad {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+}

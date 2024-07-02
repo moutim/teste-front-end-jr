@@ -99,6 +99,25 @@ header {
     }
   }
 
+  .header-menu-responsive {
+    display: none;
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      svg {
+        width: 40px;
+        height: 40px;
+        color: $cinza;
+      }
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+
   nav {
     display: flex;
     align-items: center;
@@ -144,4 +163,38 @@ header {
       }
     }
   }
+
+  @media screen and (max-width: 950px) {
+    .header-search {
+      height: 90px;
+      padding: 0;
+    }
+
+    .header-infos, .header-buttons, .header-input, nav {
+      display: none;
+    }
+    
+    .header-menu-responsive {
+      display: block;
+    }
+  }
 }
+
+.hide-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .header-input {
+    input {
+      width: 400px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    height: 90px;
+  }
+}
+

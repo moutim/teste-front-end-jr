@@ -35,3 +35,15 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .cardAd {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cardAd {
+    width: 100%;
+  }
+}

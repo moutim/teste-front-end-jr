@@ -12,3 +12,9 @@
   width: 1280px;
   margin: auto;
 }
+
+@media screen and (max-width: 1279px) {
+  .limiter {
+    width: 90%;
+  }
+}

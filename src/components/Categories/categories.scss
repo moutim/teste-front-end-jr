@@ -2,7 +2,9 @@
 
 .categories {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 34px;
   margin-bottom: 39px;
+  gap: 20px;
 }

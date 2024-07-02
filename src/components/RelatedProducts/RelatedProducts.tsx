@@ -8,13 +8,13 @@ import CardAd from '../CardAd/CardAd';
 import mockProducts from '../../mocks/products';
 
 interface ReturnAPI {
-  success: boolean,
-    products: {
-      productName: string,
-      photo: string,
-      price: number,
-      descriptionShort: string
-    }[]
+  success: boolean;
+  products: {
+    productName: string;
+    photo: string;
+    price: number;
+    descriptionShort: string;
+  }[];
 }
 
 interface Product {
@@ -36,7 +36,7 @@ const RelatedProducts: React.FC = () => {
           setProducts(result.products);
           return;
         }
-      } catch(e) {
+      } catch (e) {
         console.log(e);
       }
 
@@ -44,11 +44,13 @@ const RelatedProducts: React.FC = () => {
     };
 
     getProducts();
-  });
+  }, []);
 
   const showNextProduct = () => {
-    if (index + 1 < products.length) {
+    if (index + 4 < products.length) {
       setIndex(index + 1);
+    } else {
+      setIndex(0);
     }
   };
 
@@ -76,24 +78,27 @@ const RelatedProducts: React.FC = () => {
       <section className='products'>
         <i onClick={showPrevProduct}><MdOutlineKeyboardArrowLeft /></i>
 
-        <div className='limiter container-products'>
-          {
-            products.length > 0 && products.slice(index, index + 4).map((item, index) => {
-              return (
-                <CardProduct
-                  key={index}
-                  productName={item.productName}
-                  productDescription={item.descriptionShort}
-                  srcImg={item.photo}
-                  oldPrice={item.price}
-                  newPrice={item.price - (item.price * 0.05)}
-                  priceDivided={(item.price / 2)}
-                />
-              );
-            })
-          }
+        <div className='container-products'>
+          <div className='product-cards'
+            style={{
+              left: `-${index * 332}px`,
+              width: `${products.length * 332}px`,
+            }}
+          >
+            {products.map((item, idx) => (
+              <CardProduct
+                key={idx}
+                productName={item.productName}
+                productDescription={item.descriptionShort}
+                srcImg={item.photo}
+                oldPrice={item.price}
+                newPrice={item.price - (item.price * 0.05)}
+                priceDivided={item.price / 2}
+              />
+            ))}
+          </div>
         </div>
-    
+
         <i onClick={showNextProduct}><MdKeyboardArrowRight /></i>
       </section>
 
@@ -106,3 +111,4 @@ const RelatedProducts: React.FC = () => {
 };
 
 export default RelatedProducts;
+

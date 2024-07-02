@@ -4,29 +4,31 @@
   nav {
     ul {
       display: flex;
-    
+      flex-wrap: wrap;
+      justify-content: center;
+
       li {
         display: flex;
         align-items: center;
         justify-content: center;
         border: 1px solid #BDBDBD;
         height: 40px;
-        width: 100%;
+        width: 211.5px;
         font-weight: $font-weight-regular;
         font-size: $p-medium;
         text-transform: uppercase;
         transition: .2s;
-      }
 
-      li:nth-child(1) {
-        color: $rosa-primario;
-        font-weight: $font-weight-bold;
-      }
+        &:nth-child(1) {
+          color: $rosa-primario;
+          font-weight: $font-weight-bold;
+        }
 
-      li:hover {
-        color: $rosa-primario;
-        cursor: pointer;
-        transition: .2s;
+        &:hover {
+          color: $rosa-primario;
+          cursor: pointer;
+          transition: .2s;
+        }
       }
     }
   }
@@ -34,11 +36,12 @@
   .products {
     margin-top: 17px;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     svg {
-      width: 60px;
-      height: 60px;
+      width: 45px;
+      height: 45px;
     }
 
     i:hover {
@@ -46,8 +49,18 @@
     }
 
     .container-products {
+      overflow: hidden;
+      position: relative;
+      width: 1280px;
+      margin: 0 10px;
+    }
+
+    .product-cards {
+      padding: 5px;
       display: flex;
-      justify-content: space-between;
+      gap: 62px;
+      position: relative;
+      transition: .3s ease-in-out;
     }
   }
 
@@ -56,4 +69,12 @@
     justify-content: space-between;
     margin-top: 71px;
   }
+
+  @media screen and (max-width: 1000px) {
+    .section-partners {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+  
 }

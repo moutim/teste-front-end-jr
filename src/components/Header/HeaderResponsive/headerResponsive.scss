@@ -1,0 +1,105 @@
+@import '../../../variables.scss';
+
+.header-responsive {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  padding: 30px 10px;
+
+  .button-close {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      border: none;
+      background-color: transparent;
+      svg {
+        width: 30px;
+        height: 30px;
+        color: $cinza;
+      }
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header-input-mobile {
+    position: relative;
+    text-align: center;
+
+    input {
+      font-size: 12px;
+      height: 48px;
+      width: 80%;
+      border: none;
+      background-color: #F6F5F2;
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+
+    button {
+      position: absolute;
+      right: 45px;
+      top: 50%;
+      transform: translateY(-45%);
+      border: none;
+      background-color: transparent;
+
+      i, svg {
+        width: 22px;
+        height: 22px;
+        color: $cinza;
+      }
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header-buttons-mobile {
+    text-align: center;
+    margin: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    button {
+      border: none;
+      background-color: transparent;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    i, svg {
+      display: block;
+      width: 35px;
+      height: 35px;
+      color: $cinza;
+      margin: 0 10px;
+    }
+  }
+
+  .nav-mobile {
+    box-shadow: none;
+    display: flex;
+  
+    ul {
+      flex-direction: column;
+      margin-top: 100%;
+
+      li {
+        justify-content: center;
+        margin: 10px 0;
+      }
+    }
+  }
+}
