@@ -27,7 +27,7 @@ const CardProduct: React.FC<CardProductProps> = ({ productDescription, srcImg, o
           productName={productName}
           productDescription={productDescription}
           srcImg={srcImg}
-          price={formatCurrency(newPrice)}
+          price={formatCurrency(oldPrice)}
           closeModal={changeModal}
         />
       }
