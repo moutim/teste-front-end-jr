@@ -5,6 +5,7 @@ import CardProduct from '../CardProduct/CardProduct';
 import { MdOutlineKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import fetchProducts from '../../utils/fetchProducts';
 import CardAd from '../CardAd/CardAd';
+import mockProducts from '../../mocks/products';
 
 interface ReturnAPI {
   success: boolean,
@@ -24,75 +25,22 @@ interface Product {
 }
 
 const RelatedProducts: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([
-    {
-      'productName': 'Iphone 11 PRO MAX BRANCO 1',
-      'descriptionShort': 'Iphone 11 PRO MAX BRANCO 1',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 15000
-    },
-    {
-      'productName': 'IPHONE 13 MINI 1',
-      'descriptionShort': 'IPHONE 13 MINI 1',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 9000
-    },
-    {
-      'productName': 'Iphone 11 PRO MAX BRANCO 2',
-      'descriptionShort': 'Iphone 11 PRO MAX BRANCO 2',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 14990
-    },
-    {
-      'productName': 'IPHONE 13 MINI 2',
-      'descriptionShort': 'IPHONE 13 MINI 2',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 12000
-    },
-    {
-      'productName': 'Iphone 11 PRO MAX BRANCO 3',
-      'descriptionShort': 'Iphone 11 PRO MAX BRANCO 3',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 4550
-    },
-    {
-      'productName': 'IPHONE 13 MINI 3',
-      'descriptionShort': 'IPHONE 13 MINI 3',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 38000
-    },
-    {
-      'productName': 'Iphone 11 PRO MAX BRANCO 4',
-      'descriptionShort': 'Iphone 11 PRO MAX BRANCO 4',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 42000
-    },
-    {
-      'productName': 'IPHONE 13 MINI 4',
-      'descriptionShort': 'IPHONE 13 MINI 4',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 520
-    },
-    {
-      'productName': 'Iphone 11 PRO MAX BRANCO 5',
-      'descriptionShort': 'Iphone 11 PRO MAX BRANCO 5',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 149990
-    },
-    {
-      'productName': 'IPHONE 13 MINI 5',
-      'descriptionShort': 'IPHONE 13 MINI 5',
-      'photo': 'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-      'price': 100000
-    }
-  ]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const getProducts = async () => {
-      const result: ReturnAPI = await fetchProducts();
+      try {
+        const result: ReturnAPI = await fetchProducts();
+        if (result.success) {
+          setProducts(result.products);
+          return;
+        }
+      } catch(e) {
+        console.log(e);
+      }
 
-      if (result.success) setProducts(result.products);
+      setProducts(mockProducts);
     };
 
     getProducts();
@@ -130,7 +78,7 @@ const RelatedProducts: React.FC = () => {
 
         <div className='limiter container-products'>
           {
-            products.slice(index, index + 4).map((item, index) => {
+            products.length > 0 && products.slice(index, index + 4).map((item, index) => {
               return (
                 <CardProduct
                   key={index}
