@@ -67,7 +67,7 @@ projeto-ecommerce/
 
    ```sh
    git clone https://github.com/moutim/teste-front-end-jr.git
-   cd ecommerce-teste-front-end
+   cd teste-front-end-jr
    ```
 
 2. **Instale as Dependências:**
