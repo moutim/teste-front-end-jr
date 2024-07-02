@@ -4,16 +4,16 @@ import './footer.scss';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa'; 
 import { FaInstagram } from 'react-icons/fa6';
 
-import alelo from '../../assets/alelo.png';
-import amex from '../../assets/amex.png';
-import dinners from '../../assets/dinners.png';
-import elo from '../../assets/elo.png';
-import ifood from '../../assets/ifood.png';
-import mastercard from '../../assets/mastercard.png';
-import pix from '../../assets/pix.png';
-import sodexo from '../../assets/sodexo.png';
-import ticket from '../../assets/ticket.png';
-import visa from '../../assets/visa.png';
+import alelo from '../../assets/alelo.svg';
+import amex from '../../assets/amex.svg';
+import dinners from '../../assets/dinners.svg';
+import elo from '../../assets/elo.svg';
+import ifood from '../../assets/ifood.svg';
+import mastercard from '../../assets/mastercard.svg';
+import pix from '../../assets/pix.svg';
+import sodexo from '../../assets/sodexo.svg';
+import ticket from '../../assets/ticket.svg';
+import visa from '../../assets/visa.svg';
 
 import logoEconverse from '../../assets/logo-econverse.svg';
 import logoVTEXWhite from '../../assets/logo-branco.svg';
