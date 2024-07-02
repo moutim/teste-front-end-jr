@@ -13,21 +13,46 @@
   }
 
   .container-brands {
-    margin-top: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    width: calc(100%);
+    position: relative;
+  }
 
-    .brands-carousel {
-      overflow: hidden;
-      // width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transition: .3s ease-in-out;
+  .buttons-prev-next {
+    button {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      img {
+        width: 56px;
+        height: 56px;
+      }
     }
 
-    i {
+    button:hover {
       cursor: pointer;
     }
+
+    .prev {
+      left: 50px;
+    }
+
+    .next {
+      right: 50px;
+    }
+  }
+
+  .brand-cards {
+    display: flex;
+    position: relative;
+    gap: 50px;
+    padding: 5px;
+    transition: .3s ease-in-out;
+    margin-top: 52px;
+    margin-bottom: 80px;
   }
 }

@@ -60,6 +60,7 @@ footer {
 
         .container-payments {
           display: flex;
+          justify-content: space-between;
           flex-wrap: wrap;
           width: 195px;
           gap: 30px;

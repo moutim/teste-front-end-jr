@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
-import CardBrand from './CardBrand/CardBrand';
-import './brands.scss';
 import arrowLeft from '../../assets/seta-esquerda.png';
 import arrowRight from '../../assets/seta-direita.png';
+import CardBrand from './CardBrand/CardBrand';
+import './brands.scss';
 
 const Brands: React.FC = () => {
-  const [index, setIndex] = useState<number>(0);
+  const [index,setIndex] = useState<number>(0);
 
   const next = () => {
-    if(index === 5) {
-      return setIndex(0);
-    }
-
+    if(index == 5) return setIndex(0);
     setIndex(index + 1);
   };
 
   const prev = () => {
-    if(index <=  0) {
-      return setIndex(0);
-    }
-
+    if(index <=  0) return setIndex(0);
     setIndex(index - 1);
   };
 
@@ -30,17 +24,26 @@ const Brands: React.FC = () => {
       </div>
 
       <div className='container-brands'>
-        {index > 0 && (
-          <i onClick={prev}><img src={arrowLeft} alt="Ícone de uma seta para a esquerda" /></i>
-        )}
-        <div className='brands-carousel'>
+        <div className='buttons-prev-next'>
           {
-            Array.from(Array(10), (_brand, index) => (
-              <CardBrand key={index} />
-            ))
+            index > 0 && (
+              <button onClick={prev} className='prev'><img src={arrowLeft} alt="Ícone de uma seta para a esquerda" /></button>
+            )
+          }
+          <button onClick={next} className='next'><img src={arrowRight} alt="Ícone de uma seta para a direita" /></button>
+        </div>
+
+        <div 
+          className='brand-cards'
+          style={{
+            left: `-${index * 251}px`,
+            width: 'calc(251px * 10)'
+          }}
+        >
+          {
+            Array.from(Array(10), (_, key) => (<CardBrand key={key} />))
           }
         </div>
-        <i onClick={next}><img src={arrowRight} alt="Ícone de uma seta para a direita" /></i>
       </div>
     </section>
   );
